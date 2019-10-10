@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Common Font Size -->
+    <dimen name="fontSize_0">0sp</dimen>
+    <dimen name="fontSize_1">1sp</dimen>
+    <dimen name="fontSize_2">2sp</dimen>
+    <dimen name="fontSize_3">3sp</dimen>
+    <dimen name="fontSize_4">4sp</dimen>
+    <dimen name="fontSize_5">5sp</dimen>
+    <dimen name="fontSize_6">6sp</dimen>
+    <dimen name="fontSize_7">7sp</dimen>
+    <dimen name="fontSize_8">8sp</dimen>
+    <dimen name="fontSize_9">9sp</dimen>
+    <dimen name="fontSize_10">10sp</dimen>
+    <dimen name="fontSize_11">11sp</dimen>
+    <dimen name="fontSize_12">12sp</dimen>
+    <dimen name="fontSize_13">13sp</dimen>
+    <dimen name="fontSize_14">14sp</dimen>
+    <dimen name="fontSize_15">15sp</dimen>
+    <dimen name="fontSize_16">16sp</dimen>
+    <dimen name="fontSize_17">17sp</dimen>
+    <dimen name="fontSize_18">18sp</dimen>
+    <dimen name="fontSize_19">19sp</dimen>
+    <dimen name="fontSize_20">20sp</dimen>
+    <dimen name="fontSize_21">21sp</dimen>
+    <dimen name="fontSize_22">22sp</dimen>
+    <dimen name="fontSize_23">23sp</dimen>
+    <dimen name="fontSize_24">24sp</dimen>
+    <dimen name="fontSize_25">25sp</dimen>
+    <dimen name="fontSize_26">26sp</dimen>
+    <dimen name="fontSize_27">27sp</dimen>
+    <dimen name="fontSize_28">28sp</dimen>
+    <dimen name="fontSize_29">29sp</dimen>
+    <dimen name="fontSize_30">30sp</dimen>
+    <dimen name="fontSize_31">31sp</dimen>
+    <dimen name="fontSize_32">32sp</dimen>
+    <dimen name="fontSize_36">36sp</dimen>
+    <dimen name="fontSize_39">39sp</dimen>
+    <dimen name="fontSize_40">40sp</dimen>
+    <dimen name="fontSize_42">42sp</dimen>
+    <dimen name="fontSize_44">44sp</dimen>
+    <dimen name="fontSize_45">45sp</dimen>
+    <dimen name="fontSize_60">60sp</dimen>
+
+    <dimen name="abc_icon_padding">12dp</dimen>
+</resources>

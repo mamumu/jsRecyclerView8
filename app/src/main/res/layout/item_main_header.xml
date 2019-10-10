@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/cb_main"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@mipmap/banner_bg"
+        app:canLoop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_main1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_liren"
+            android:gravity="center"
+            android:text="aaa"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/fontSize_11" />
+
+        <TextView
+            android:id="@+id/tv_main2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_liren"
+            android:gravity="center"
+            android:text="bbb"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/fontSize_11" />
+
+        <TextView
+            android:id="@+id/tv_main3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_liren"
+            android:gravity="center"
+            android:text="ccc"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/fontSize_11" />
+
+        <TextView
+            android:id="@+id/tv_main4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_liren"
+            android:gravity="center"
+            android:text="ddd"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/fontSize_11" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_main5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_liren"
+            android:gravity="center"
+            android:text="eee"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/fontSize_11" />
+
+        <TextView
+            android:id="@+id/tv_main6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_liren"
+            android:gravity="center"
+            android:text="fff"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/fontSize_11" />
+
+        <TextView
+            android:id="@+id/tv_main7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_liren"
+            android:gravity="center"
+            android:text="ggg"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/fontSize_11" />
+
+        <TextView
+            android:id="@+id/tv_main8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_liren"
+            android:gravity="center"
+            android:text="hhh"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/fontSize_11" />
+    </LinearLayout>
+</LinearLayout>

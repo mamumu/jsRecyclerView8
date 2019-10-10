@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundiv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/shape_circle_bg"
+    android:orientation="vertical">
+
+    <com.mumu.jsrecyclerview8.RoundImageView
+        android:id="@+id/item_iv_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_circle_image"
+        android:scaleType="fitXY"
+        roundiv:left_top_radius="10dp"
+        roundiv:right_top_radius="10dp" />
+
+    <TextView
+        android:id="@+id/item_tv_main_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="end"
+        android:maxHeight="35dp"
+        android:textColor="@color/tv_3"
+        android:textSize="@dimen/fontSize_13"
+        tools:text="华为手机华为手机华为手机华为手机华为手机华为手机华为手机华为手机" />
+</LinearLayout>
