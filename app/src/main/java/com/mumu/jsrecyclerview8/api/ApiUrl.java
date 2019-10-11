@@ -1,5 +1,6 @@
 package com.mumu.jsrecyclerview8.api;
 
+import com.mumu.jsrecyclerview8.BaseResponse;
 import com.mumu.jsrecyclerview8.MainEntity;
 
 import java.util.List;
@@ -18,5 +19,5 @@ import retrofit2.http.Path;
 public interface ApiUrl {
 
     @GET("data/福利/{num}/{page}")
-    Call<List<MainEntity.ResultsBean>> getPic(@Path("num")int num, @Path("page")int page);
+    Call<BaseResponse<MainEntity.ResultsBean>> getPic(@Path("num")int num, @Path("page")int page);
 }

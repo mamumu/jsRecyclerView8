@@ -310,35 +310,37 @@ public class MainActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         ApiUrl apiUrl=retrofit.create(ApiUrl.class);
-        Call<List<MainEntity.ResultsBean>> call = apiUrl.getPic(10,mPage);
-        call.enqueue(new Callback<List<MainEntity.ResultsBean>>() {
-            @Override
-            public void onResponse(Call<List<MainEntity.ResultsBean>> call, Response<List<MainEntity.ResultsBean>> response) {
-                if (mPage == 1) {
-                    mList.clear();
-                }
-                if (response.body() != null&& response.body().size() > 0) {
-                    if (isSrl && mPage != 1) {
-                        int start = mList.size();
-                        mMainAdapter.notifyItemRangeInserted(start, 10);
-                    } else {
-                        mMainAdapter.setNewData(mList);
-                    }
-                    isSrl = false;
+        Call<BaseResponse<MainEntity.ResultsBean>> call = apiUrl.getPic(10,mPage);
+        call.enqueue(new Callback<BaseResponse<MainEntity.ResultsBean>>() {
+                         @Override
+                         public void onResponse(Call<BaseResponse<MainEntity.ResultsBean>> call, Response<BaseResponse<MainEntity.ResultsBean>> response) {
+                             if (mPage == 1) {
+                                 mList.clear();
+                             }
+                             if (response.body() != null&& response.body().getResults().size() > 0) {
+                                 mList.addAll(response.body().getResults());
+                                 if (isSrl && mPage != 1) {
+                                     int start = mList.size();
+                                     mMainAdapter.notifyItemRangeInserted(start, 10);
+                                 } else {
+                                     mMainAdapter.setNewData(mList);
+                                 }
+                                 isSrl = false;
 
-                    srlMain.finishRefresh();
-                    if (response.body() != null && response.body().size() >= 10) {
-                        srlMain.finishLoadMore();
-                    } else {
-                        srlMain.finishLoadMoreWithNoMoreData();
-                    }
-                }
-            }
+                                 srlMain.finishRefresh();
+                                 if (response.body() != null && response.body().getResults().size() >= 10) {
+                                     srlMain.finishLoadMore();
+                                 } else {
+                                     srlMain.finishLoadMoreWithNoMoreData();
+                                 }
+                             }
+                         }
 
-            @Override
-            public void onFailure(Call<List<MainEntity.ResultsBean>> call, Throwable t) {
-                Log.e("mmm","errow "+t.getMessage());
-            }
-        });
+                         @Override
+                         public void onFailure(Call<BaseResponse<MainEntity.ResultsBean>> call, Throwable t) {
+                             Log.e("mmm","errow "+t.getMessage());
+                         }
+                     }
+        );
     }
 }
