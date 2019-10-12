@@ -10,14 +10,12 @@
     android:background="@drawable/shape_circle_bg"
     android:orientation="vertical">
 
-    <com.mumu.jsrecyclerview8.RoundImageView
+    <ImageView
         android:id="@+id/item_iv_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_circle_image"
-        android:scaleType="fitXY"
-        roundiv:left_top_radius="10dp"
-        roundiv:right_top_radius="10dp" />
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/item_tv_main_name"

@@ -1,5 +1,6 @@
 package com.mumu.jsrecyclerview8;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -86,11 +87,11 @@ public class RoundImageView extends AppCompatImageView {
         int maxBottom = Math.max(leftBottomRadius, rightBottomRadius);
         int minHeight = maxTop + maxBottom;
         if (width >= minWidth && height > minHeight) {
-            Path path = new Path();
+            @SuppressLint("DrawAllocation") Path path = new Path();
             //四个角：右上，右下，左下，左上
             path.moveTo(leftTopRadius, 0);
             path.lineTo(width - rightTopRadius, 0);
-            path.quadTo(width, 0, width, rightTopRadius);
+            path.cubicTo(width - rightTopRadius, 0,width, 0, width, rightTopRadius);
 
             path.lineTo(width, height - rightBottomRadius);
             path.quadTo(width, height, width - rightBottomRadius, height);

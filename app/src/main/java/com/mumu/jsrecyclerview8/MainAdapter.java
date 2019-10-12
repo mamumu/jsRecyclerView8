@@ -48,7 +48,7 @@ public class MainAdapter extends BaseQuickAdapter<MainEntity.ResultsBean, BaseVi
     protected void convert(BaseViewHolder helper, MainEntity.ResultsBean data) {
         //将每一个需要赋值的id和对应的数据绑定
         ImageView imageView = helper.getView(R.id.item_iv_main);
-        helper.setText(R.id.item_tv_main_name, data.getType());//名字
+        helper.setText(R.id.item_tv_main_name, "type:"+data.getType()+"+id:"+data.get_id());//名字
         if (TextUtils.isEmpty(data.getType()) || TextUtils.isEmpty(data.getUrl())) {
             return;
         }

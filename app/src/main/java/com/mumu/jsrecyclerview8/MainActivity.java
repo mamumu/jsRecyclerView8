@@ -133,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
         mMainAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Toast.makeText(MainActivity.this, "你点击了第" + position + "张美女图片", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -167,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
                 .setOnItemClickListener(new OnItemClickListener() {
                     @Override
                     public void onItemClick(int position) {
-                        Toast.makeText(MainActivity.this, "你点击了第" + position + "张图片", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "你点击了第" + position + "张banner图片", Toast.LENGTH_SHORT).show();
                     }
                 });
         if (arrayList.size() > 0) {
@@ -294,6 +295,10 @@ public class MainActivity extends AppCompatActivity {
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
                 //上拉加载，一般添加调用接口获取更多数据的方法
                 mPage++;
+                //接口后面的图片为空，这样做目的是让图片都能加载
+                if(mPage>4){
+                    mPage=2;
+                }
                 isSrl = true;
                 getPicCmd();
             }
